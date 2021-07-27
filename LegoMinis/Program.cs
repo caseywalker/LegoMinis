@@ -1,5 +1,6 @@
 ﻿using LegoMinis.Heads;
 using System;
+using System.Collections.Generic;
 
 namespace LegoMinis
 {
@@ -12,6 +13,16 @@ namespace LegoMinis
       var head = new ConstructionWorkerHead();
       head.Color = LegoColor.Yellow;
 
+      var batmanHead = new Batman();
+
+      var astronautHead = new Astronaut();
+
+      var heads = new List<HeadBase>() { head, batmanHead, astronautHead };
+
+      foreach (var legoHead in heads)
+      {
+        legoHead.SayHi();
+      }
     }
   }
 }

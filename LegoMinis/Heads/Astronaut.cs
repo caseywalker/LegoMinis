@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace LegoMinis.Heads
 {
-  class Astronaut
+  class Astronaut : HeadBase
   {
-    public LegoColor Color { get; set; }
     public bool WearingHelmet { get; set; }
     public FacialHair FacialHair { get; set; }
 
-    public void SayHi()
+    public override void SayHi()
     {
+      base.SayHi();
       Console.WriteLine("Major Tom to Ground Control...");
     }
 
-    public void Spin()
+    public override void Spin()
     {
       Console.WriteLine("The Astronaut head spins to take in beauty of the cosmos...");
     }

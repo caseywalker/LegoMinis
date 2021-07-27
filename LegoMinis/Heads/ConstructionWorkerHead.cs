@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace LegoMinis.Heads
 {
-  class ConstructionWorkerHead
+  class ConstructionWorkerHead : HeadBase
   {
     public bool HasMullet { get; set; }
-    public LegoColor Color { get; set; }
     public int NumberOfTeeth { get; set; }
     public bool WearingHardHat { get; set; }
 
@@ -20,7 +19,7 @@ namespace LegoMinis.Heads
       return WearingHardHat;
     }
 
-    public void Spin()
+    public override void Spin()
     {
       if(NumberOfTeeth > 0)
       {
@@ -29,10 +28,6 @@ namespace LegoMinis.Heads
       Console.WriteLine($"The {Color} Construction Worker Head spins after being hit by a girder.");
     }
 
-    public void SayHi()
-    {
-      Console.WriteLine($"The Construction Worker Head says hello");
-    }
   }
   enum LegoColor
   {
@@ -40,7 +35,8 @@ namespace LegoMinis.Heads
     White,
     Brown,
     Green,
-    Red
+    Red,
+    Black
   }
 
 }

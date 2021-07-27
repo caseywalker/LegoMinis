@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace LegoMinis.Heads
 {
-  class Batman
+  class Batman : HeadBase
   {
     public bool IsWearingMask { get; set; }
     public string Version { get; set; }
     public string FacialExpression { get; set; } = "Stoic";
 
-    public void Spin()
+    public Batman()
+    {
+      Color = LegoColor.Black;
+    }
+
+    public override void Spin()
     {
       Console.WriteLine("Where is the Joker?!?!?!");
     }
 
-    public void SayHi()
+    public override void SayHi()
     {
       Console.WriteLine("I'm Batman!");
     }
