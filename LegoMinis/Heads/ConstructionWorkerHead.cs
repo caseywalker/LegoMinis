@@ -29,14 +29,5 @@ namespace LegoMinis.Heads
     }
 
   }
-  enum LegoColor
-  {
-    Yellow,
-    White,
-    Brown,
-    Green,
-    Red,
-    Black
-  }
 
 }
